@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="PieChart.js"></script>
+    <title></title>
+    <script>
+        window.onload = createPie;
+
+        function createPie() {
+            var pieChart = new pie("piechart",
+                    {
+                        includeLabel: true,
+                        data: [40, 250, 50, 20],
+                        label: ["11%", "69.6%", "15.4%", "2%"],
+                        colors: [
+                            ["#FFDAB9", "#FFDAB9"],
+                            ["#E6E6FA", "#E6E6FA"],
+                            ["#E0FFFF", "#E0FFFF"],
+
+                            ["#FFFFFF", "#FFFFFF"]
+                        ]
+                    }
+            );
+
+            pieChart.draw();
+        }
+
+
+    </script>
+</head>
+<body>
+<canvas id="piechart" width="400" height="400"></canvas>
+</body>
+</html>
